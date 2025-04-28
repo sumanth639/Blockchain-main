@@ -288,40 +288,59 @@
                 class="rwt-dynamic-form"
                 id="contact-form"
                 method="POST"
-                action="mail.php"
+                action="https://api.web3forms.com/submit"
               >
+                <!-- Web3Forms Access Token -->
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value="af0b7193-e1ba-42f6-a435-db4fb28a9f4a"
+                />
+
                 <div class="mb-5">
                   <label for="contact-name" class="form-label">Your Name</label>
-                  <input name="contact-name" id="contact-name" type="text" />
+                  <input name="name" id="contact-name" type="text" required />
                 </div>
+
                 <div class="mb-5">
                   <label for="contact-email" class="form-label">Email</label>
-                  <input id="contact-email" name="contact-email" type="email" />
+                  <input
+                    id="contact-email"
+                    name="email"
+                    type="email"
+                    required
+                  />
                 </div>
+
                 <div class="mb-5">
                   <label for="subject" class="form-label">Subject</label>
-                  <input id="subject" name="subject" type="text" />
+                  <input id="subject" name="subject" type="text" required />
                 </div>
+
                 <div class="mb-5">
                   <label for="contact-message" class="form-label"
                     >Write Message</label
                   >
                   <textarea
-                    name="contact-message"
+                    name="message"
                     id="contact-message"
                     rows="3"
+                    required
                   ></textarea>
                 </div>
+
                 <div class="mb-5 rn-check-box">
                   <input
                     id="condition"
                     type="checkbox"
                     class="rn-check-box-input"
+                    required
                   />
-                  <label for="condition" class="rn-check-box-label"
-                    >Allow to all tearms & condition</label
-                  >
+                  <label for="condition" class="rn-check-box-label">
+                    Allow to all terms & conditions
+                  </label>
                 </div>
+
                 <button name="submit" type="submit" class="btn btn-primary">
                   Send Message
                 </button>
